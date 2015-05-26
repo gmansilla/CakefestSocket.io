@@ -1,13 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: guille
- * Date: 15-05-14
- * Time: 10:55 PM
- */
-
 namespace App\Controller;
-
 
 class CommentsController extends AppController {
 
