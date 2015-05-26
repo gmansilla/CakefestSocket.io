@@ -45,7 +45,6 @@ class Notifier implements EventListenerInterface {
 		$this->sendNotification($endPoint, $data);
 	}
 
-
 	private function sendNotification($endPoint, $data)
 	{
 		$http = new Client();
@@ -56,6 +55,5 @@ class Notifier implements EventListenerInterface {
 		);
 		Log::write('debug', print_r($response, true));
 	}
-
 
 }
