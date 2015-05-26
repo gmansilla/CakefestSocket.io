@@ -1,14 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: guille
- * Date: 15-05-10
- * Time: 5:32 PM
- */
-
 namespace App\Controller;
-
-
 
 class ArticlesController extends AppController
 {

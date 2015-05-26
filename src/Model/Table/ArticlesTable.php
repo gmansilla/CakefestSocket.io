@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: guille
- * Date: 15-05-10
- * Time: 5:28 PM
- */
-
 namespace App\Model\Table;
 
 use Cake\Event\Event;

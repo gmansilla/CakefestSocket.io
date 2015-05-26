@@ -17,6 +17,9 @@ class Notifier implements EventListenerInterface {
 
 	protected $host = 'http://demo.cakefest:3000/';
 
+	/**
+	 * @return array
+	 */
 	public function implementedEvents()
 	{
 		return [
@@ -25,6 +28,11 @@ class Notifier implements EventListenerInterface {
 		];
 	}
 
+	/**
+	 * Event handler for article notification
+	 * @param Event $event
+	 * @param Entity $article
+	 */
 	public function articleNotification(Event $event, Entity $article)
 	{
 		$endPoint = 'articleNotification';
@@ -34,6 +42,11 @@ class Notifier implements EventListenerInterface {
 		$this->sendNotification($endPoint, $data);
 	}
 
+	/**
+	 * Event handler for comment notification
+	 * @param Event $event
+	 * @param Entity $comment
+	 */
 	public function commentNotification(Event $event, Entity $comment)
 	{
 		$endPoint = 'newComment';
@@ -45,6 +58,11 @@ class Notifier implements EventListenerInterface {
 		$this->sendNotification($endPoint, $data);
 	}
 
+	/**
+	 * Sends message to Node.js
+	 * @param $endPoint
+	 * @param $data
+	 */
 	private function sendNotification($endPoint, $data)
 	{
 		$http = new Client();
