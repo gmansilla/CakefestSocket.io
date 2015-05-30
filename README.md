@@ -1,24 +1,20 @@
-# CakePHP Application Skeleton
+# CakePHP + Node.js + Socket.io demo
 
-[![Build Status](https://api.travis-ci.org/cakephp/app.png)](https://travis-ci.org/cakephp/app)
-[![License](https://poser.pugx.org/cakephp/app/license.svg)](https://packagist.org/packages/cakephp/app)
+The idea behind this demo is to demonstrate how to implement real-time notifications using CakePHP + Node.js + Socket.io.
 
-A skeleton for creating applications with [CakePHP](http://cakephp.org) 3.0.
+## Notifications:
 
-## Installation
+We will notify all users (in articles/index view) when an article is added/modified.
+We will notify in articles/view/$articleId view when a comment is added to that particular article, in other words, users will be able to see the comments as soon as somebody adds one (No need to reload the page).
 
-1. Download [Composer](http://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Run `php composer.phar create-project --prefer-dist cakephp/app [app_name]`.
+## Notes
 
-If Composer is installed globally, run
-```bash
-composer create-project --prefer-dist cakephp/app [app_name]
-```
+I used the [blog](http://book.cakephp.org/3.0/en/tutorials-and-examples/blog/blog.html) demo in cakephp docs, so no rocket science in here, just add the articles and comments table
 
-You should now be able to visit the path to where you installed the app and see
-the setup traffic lights.
+Grab a copy of the Node.js app [here](https://github.com/gmansilla/CakefestNodejs) (I used port 3000).
 
-## Configuration
+The hostname I used is http://demo.cakefest/ so you have to update your hosts file.
 
-Read and edit `config/app.php` and setup the 'Datasources' and any other
-configuration relevant for your application.
+## TODO
+
+You might want to use a configuration setting to store the url to connect to the Node.js server
